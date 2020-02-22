@@ -31,9 +31,9 @@
 ##      If maze has no where to go, no solution
 ##  Remove any extra "S"
 
-def main(userFile):
+def main():
     ##Open the Maze file and append it into a list of list of strings
-    #userFile = input("Enter the name of a file containing a maze: ").strip()
+    userFile = input("Enter the name of a file containing a maze: ").strip()
     myFile = open(userFile,"r")
 
     mazeList = []
@@ -186,13 +186,7 @@ def outOfBoundsUp(positionX,positionY,mazeList):
     except IndexError:
         return False
 try:
-    main("C:/Users/jervi/Desktop/School Work/Fall 2019/Programming Principles/Programs/Projects/Project_2_Test_Mazes/ec1-1.dat")
-    main("C:/Users/jervi/Desktop/School Work/Fall 2019/Programming Principles/Programs/Projects/Project_2_Test_Mazes/ec1-2.dat")
-    main("C:/Users/jervi/Desktop/School Work/Fall 2019/Programming Principles/Programs/Projects/Project_2_Test_Mazes/ec2-2.dat")
-    main("C:/Users/jervi/Desktop/School Work/Fall 2019/Programming Principles/Programs/Projects/Project_2_Test_Mazes/ec3-1.dat")
-    main("C:/Users/jervi/Desktop/School Work/Fall 2019/Programming Principles/Programs/Projects/Project_2_Test_Mazes/ec3-2.dat")
-    main("C:/Users/jervi/Desktop/School Work/Fall 2019/Programming Principles/Programs/Projects/Project_2_Test_Mazes/ec4-1.dat")
-    main("C:/Users/jervi/Desktop/School Work/Fall 2019/Programming Principles/Programs/Projects/Project_2_Test_Mazes/ec4-2.dat")
+    main()
 except AssertionError:  ##In isValidMaze()
     pass
 except ZeroDivisionError:   ##No solution
